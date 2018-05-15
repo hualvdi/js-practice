@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第二天的作业</title>
+	</head>
+	<body>
+		<div>
+			<h1>必做：</h1>
+			<ol>
+				<li>课堂案例敲一遍</li>
+				<li>判断一个整数，属于哪个范围：大于0；小于0；等于0</li>
+				<li>判断一个整数是偶数还是奇数，并输出判断结果</li>
+				<li>开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适</li>
+				<li>已知圆的半径，求出圆的面积</li>
+				<li>随意输入一个年份，判断这个年份是否为闰年</li>
+			</ol>
+			<h1>选做：</h1>
+			<ol>
+				<li>输入年，月，日，求出该日期是当前年的第几天</li>
+				<li>个人所得税的计算器(计算公式如下图)
+					<p>应缴个人所得税=（工资收入-3500）*税率 –速算扣除数</p>
+					<img src="../img/第二天作业图片.png" width=500px height=300px;/>
+				</li>
+				<li>石头剪刀布(设石头=1, 剪刀=2, 布=3, 两个人划拳, 比较他们的大小)</li>
+			</ol>
+		</div>
+		<div>
+			<p>必做题验证</p>
+			<p style='display: inline-block;color:red'>请输入任意一个年份:</p>
+			<input id='year' />
+			<button onclick="submit()">提交</button>
+		</div>
+		<div>
+			<p>选做题验证</p>
+			<div>
+				<p style='display: inline-block;color:red'>输入任意年月日(格式：2018-04-26)</p>
+				<input id='yearMonth' />
+				<button onclick="changeDay()">提交</button>
+			</div>
+			<div>
+				<p>两人划拳：石头剪刀布</p>
+				<p style='display: inline-block;color:red'>划拳人员A</p>
+				<input id='planner1' />
+				<p style='display: inline-block;color:red'>划拳人员B</p>
+				<input id='planner2' />
+				<button onclick="gameResult()">提交</button>
+			</div>
+		</div>
+	</body>
+	<script src='../js/training2.js'></script>
+</html>
