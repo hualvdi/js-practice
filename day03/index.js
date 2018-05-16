@@ -62,7 +62,10 @@ console.log('10的阶乘是：'+result05);
 function accumulation(maxNumber){
 	var count = 0;
 	for (var i=0;i<maxNumber;i++){
-		count = count+i;
+		if(i%2!=0){
+			count = count+i;
+		}
+		
 	}
 	return count;
 }
