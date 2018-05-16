@@ -132,3 +132,15 @@ function  runYearOut(mixYear,maxYear){
 }
 var result12 = runYearOut(1000,2000);
 console.log('1000-2000年中所有的闰年,共计：'+result12);
+
+//求出1-1/2+1/3-1/4.....1/100的和var i=1;(-1)(i+1)(1/i)
+function recursion(number){
+	var count = 0;
+	for(var i=1;i<=number;i++){
+		var sign = i%2==0?-1:1;
+		count += sign*(1/i)
+	}
+	return count;
+}
+var result13 = recursion(100);
+console.log('1-1/2+1/3-1/4.....1/100的和:'+result13);
