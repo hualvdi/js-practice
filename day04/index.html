@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第四天的作业</title>
+	</head>
+	<body>
+		<div>
+			<h1>必做：</h1>
+			<ol>
+				<li>写个函数计算所有传入参数相乘的结果(参数数量不定)</li>
+				<li>写个函数实现加减乘除运算
+					<div>
+						<p style='display: inline-block;color:#c60;'>请按提示输入：</p>
+						<input id='number1' placeholder="数字"/>
+						<input id='operator' placeholder="运算符" />
+						<input id='number2'  placeholder="数字" />
+						<button onclick="numbersCompute()">提交</button>
+					</div>
+				</li>
+				<li>写个函数实现n的阶乘
+					<div>
+						<p style='display: inline-block;color:#c60;'>请输入任意数字,计算阶乘：</p>
+						<input id='input1' />
+						<button onclick="factorial()">提交</button>
+					</div>
+				</li>
+				<li>找出0-100之间7的倍数，和包含7的数字</li>
+				<li>不用for循环，计算0-100以内的数字和</li>
+			</ol>
+			<h1>选做：</h1>
+			<ol>
+				<li>制作一个简易计算器（计算两个数的加减乘除, 带可手动输入数字和运算符）</li>
+				<li>有一堆桃子不知数目，猴子第一天吃掉一半，觉得不过瘾，又多吃了一只，第二天照此办法，吃掉剩下桃子的一半另加一只，天天如此，
+					<br/>到第n(n﹤=10)天早上，猴子发现只剩一只桃子了，问这堆桃子原来有多少只？
+					<p>(设还剩m天吃完的桃子数p,  p/2-1(m-1天的桃子数), numP(n) = (numP(n - 1) + 1) * 2)</p>
+				</li>
+				
+			</ol>
+		</div>
+	</body>
+	<script src='index.js'></script>
+</html>
