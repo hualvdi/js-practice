@@ -1,4 +1,11 @@
 /*
+ * 示例
+ * */
+//求数组中所有元素的和
+//让数组中的元素交换位置（重要）
+//求数组的最大数和最小数（重要）
+//求数组的最小数的下标（重要）
+/*
  * 练习
  * */
 //不改变原数组, 取出数组[3,2,4,5,8,6,3,9]中的[5,8,6]
@@ -61,6 +68,78 @@ function numberToArray(){
 
 //有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中, 如:[2,3,4,56,67,98] //63
 function arrayToSort(){
-	var array = document.getElementById('input2').value;
+	//var array = document.getElementById('input2').value;
 	var number = document.getElementById('input3').value;
+	var array = [2,3,4,56,67,98];
+	if(isNaN(number))return false;
+	if(number == '')return false;
+	var newArray = array.concat(Number(number));
+	function sortNumber(a,b){
+		return a-b;
+	}
+	newArray.sort(sortNumber);
+	var description = document.getElementById('printOut2');
+	description.firstChild.nodeValue = newArray;
 }
+
+//生成13位条形码(对之前的知识综合练习)
+function barCode(number){
+	var number = document.getElementById('input4').value;
+	var printOut3 = document.getElementById('printOut3');
+	if(isNaN(number))return false;//输入校验
+	if(number == '')return false;
+	if(number.length != 12){
+		alert('输入长度为'+number.length+' 长度非法');
+		return false;
+	};
+	var numberCount = 0;//运算和
+	for(var i=0;i<number.length;i++){
+		var stringToNumber = Number(number[i]);
+		if(stringToNumber%2==0){
+			numberCount += stringToNumber;
+		}else{
+			numberCount += stringToNumber*3;
+		}
+	};
+	var length = numberCount.toString().length;
+	var barCodeNumber = numberCount.toString()[length-1];
+	var barCode = '';//验证码
+	if(barCodeNumber == '0'){
+		barCode = number+'0';
+	}else{
+		barCode = number+(10-barCodeNumber);
+	}
+	console.log(number+' 的奇数+偶数之和：'+numberCount,'验证码为：'+barCodeNumber);
+	printOut3.firstChild.nodeValue = ' 带验证码的条码：'+barCode;
+}
+
+//个标题为“FlipFlop”的游戏应用程序
+function filpflop(mixNumber,maxNumber){
+	var string = '',count = 0,rule1Count = 0, rule2Count = 0,rule3Count = 0;
+	while(mixNumber<=maxNumber){
+		var rule1 = mixNumber%3==0;
+	    var rule2 = mixNumber%5==0;
+	    var rule3 = mixNumber%15==0;
+		count++;
+		if(rule3){
+			string += 'FlipFlop'+' ';
+			rule3Count++;
+		}else if(rule2){
+			string += 'Flop'+' ';
+			rule2Count++;
+		}else if(rule1){
+			string += 'Filp'+' ';
+			rule1Count++;
+		}else{
+			string += mixNumber+' ';
+		}
+		if(count %10==0){
+			console.log(string);
+			string = '';
+		}
+		mixNumber++;
+	}
+	console.log('被3整除的数共计：'+rule1Count,'，被5整除的数共计：'+rule2Count,'，被3整除又被5整除的数共计：'+rule3Count)
+	
+}
+var result06 = filpflop(1,100);

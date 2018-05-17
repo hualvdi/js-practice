@@ -24,15 +24,13 @@
 						<button onclick="numberToArray()">提交</button>
 						<p style='display: inline-block;color:#c60;' id='printOut'>结果显示</p>
 					</div>
-				<li>有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中,       如:[2,3,4,56,67,98]    //63
-					div>
-						<p style='display: inline-block;color:#c60;'>请按提示输入</p>
-						<input id='input2' placeholder="数组" />
+				<li>有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中,       如:[2,3,4,56,67,98]    //63</li>
+					<div>
+						<p style='display: inline-block;color:#c60;'>已有数组[2,3,4,56,67,98],请按提示输入</p>
 						<input id='input3' placeholder="数字" />
 						<button onclick="arrayToSort()">提交</button>
 						<p style='display: inline-block;color:#c60;' id='printOut2'>结果显示</p>
 					</div>
-				</li>
 				<li>生成13位条形码(对之前的知识综合练习)
 					<p>Ean-13码规则：第十三位数字是前十二位数字经过计算得到的校验码。</p>
 					<p>例如：690123456789  -> [6,9,0,1,2,3,4,5,6,7,8,9]</p>
@@ -45,6 +43,12 @@
 					<p>所以校验码为2（注：如果取结果的个位数为0，那么校验码不是（10-0=10），而是0）</p>
 					<p>实现函数ean13(n)计算验证码，输入12位条码，返回带验证码的条码。例如：输入：692223361219输出：6922233612192</p>
 				</li>
+				<div>
+						<p style='display: inline-block;color:#c60;'>请按提示输入</p>
+						<input id='input4' placeholder="0~9以内的任意12位数字" style='width:200px' />
+						<button onclick="barCode()">提交</button>
+						<p style='display: inline-block;color:#c60;' id='printOut3'>结果显示</p>
+					</div>
 				<li>开发一个标题为“FlipFlop”的游戏应用程序。它从1计数到100，遇到3的倍数就替换为单词“Flip”，5的倍数就替换为单词“Flop”，
 					<br/>既为3的倍数又为5的倍数则替换为单词“FlipFlop”。</li>
 			</ol>
