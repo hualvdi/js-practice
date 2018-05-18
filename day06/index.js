@@ -111,9 +111,10 @@ function dayMinus(firstDate,secondDate){
 	var input2 = document.getElementById('secondDate').value;
 	if(input1=='' || input2=='')return false;
 	var printOutDate = document.getElementById('printOutDate');
-	var firstDay = new Date(input1).getDate();
-	var secondDay = new Date(input2).getDate();
-	var text = '两个日期相差的天数:'+Math.abs(firstDay- secondDay);
+	var firstTime = new Date(input1).getTime();
+	var secondTime = new Date(input2).getTime();
+	var days = Math.abs(firstTime- secondTime)/(1000 * 60 * 60 * 24);
+	var text = '两个日期相差的天数:'+days;
 	printOutDate.innerHTML=text;
 };
 
