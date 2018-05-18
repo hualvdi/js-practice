@@ -1,0 +1,16 @@
+.timer p{
+	display: inline-block;
+	color:#c60;
+}
+.barOuter{
+	width: 200px;
+	height:20px;
+	border:1px solid black;
+}
+.progressBar{
+	width:0px;
+	height:20px;
+	background-color: red;
+	margin-top:-21px;
+}
+
