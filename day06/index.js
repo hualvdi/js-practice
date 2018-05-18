@@ -126,11 +126,12 @@ function changeWidth(){
 	var barW = 0,timer;
 	barStart.style.display ='none';
 	function addWidth(){
+		barW += 20;
 		if(barW<200){
-			barW += 20;
 			proBar.style.width = barW + 'px';
 	        description.innerHTML = (barW/200)*100+' %'; 
 		}else{
+			window.clearInterval(timer);
 			proBar.style.width = 200 + 'px';
 	        description.innerHTML = '100 %';
 	        //barStart.style.display ='inline-block';
