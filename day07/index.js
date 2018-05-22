@@ -274,31 +274,19 @@ var result32 = symmetry(['one','two','three']);
 //实现函数，查找子串出现的次数，返回字符串str中出现substring的次数传入:”abcabcabc”, “abc”; 返回:3
 function stringHandle(){
 	var str = document.getElementById('inputString4').value;
+	var strChrild = document.getElementById('inputString42').value;
 	var description = document.getElementById('descriptionStr4');
-	var obj = {},max = 0,maxStr = null;
+	var count = 0, index = -1;
 	var length = str.length;
-	for(var i=0;i<length;i++){
-		var char = str[i];
-		if(obj[char]){
-			obj[char]++;
-		}else{
-			obj[char] = 1;
+	if(str=='')return false;
+	if(strChrild=='')return false;
+	do{
+		index = str.indexOf(strChrild,index+1);
+		if(index!=-1){
+			count++;
 		}
-	}
-	for(var key in obj){
-		if(max < obj[key]){
-			max = obj[key];
-			maxStr = key;
-		}
-	}
-	console.log('作业3---3：');
-	console.log(obj)
-	for(var key in obj){
-		if(obj[key]== max){
-			console.log('出现次数最多的字符：'+key+' 出现次数： '+max)
-		}
-	}
-	//description.innerHTML = '出现次数最多的字符：'+maxStr+'出现次数： '+max;
+	}while(index!=-1)
+	description.innerHTML = '在'+str+' 中'+strChrild+' 出现次数： '+count;
 }
 //已知千锋邮箱的用户名只能由数字字母下划线组成，域名为@1000phone.com,判断一个字符串是否是千锋邮箱，是返回true，不是返回false。
 function email(){
