@@ -16,9 +16,16 @@ var practice02 = stringChange2(practiceStr);
 function randon4(number){
 	var string ='';
 	for(var i=0;i<number;i++){
-		string += Math.round(Math.random()*10);
+		console.log(number,n);
+		var n = Math.round(Math.random()*10);
+		
+		if(n ==10){
+			n = 9;
+		}
+		string += n;
 	}
 	console.log('练习题3：',string);
+	
 }
 var practice03 = randon4(4);
 
@@ -167,6 +174,8 @@ function login(){
 	var user = document.getElementById('user').value;
     var passward = document.getElementById('passsward').value;
     var loginDescription = document.getElementById('loginDescription');
+    if(passward=='')	return false;
+    if(user=='')return false;
 	var text = '登录成功  用户名：'+user+' 密码:'+passward;
 	loginDescription.innerHTML = text;
 }
@@ -254,6 +263,7 @@ function inverted(){
 	var description = document.getElementById('descriptionStr3');
 	var array = str.split(' ').reverse();
 	var string = '';
+	if(str=='')return false;
 	for(var i=0;i<array.length;i++){
 		string += array[i]+' ';
 	}
