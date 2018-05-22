@@ -131,3 +131,202 @@ for(var i=0;i<bigStrLength;i++){
 		console.log(stringPrinout);
 	}
 }
+/*作业*/
+/*
+ * 注册页面的简单数据校验
+ * 
+ * */
+//用户名不可以用数字开头
+function usrClick(){
+	var user = document.getElementById('user').value;
+	if(isNaN(user[0])==false){
+		alert('用户名不可以用数字开头~');
+		return false;
+	}
+	if(user.length<6 || user.length >20){
+		alert('用户名长度不低于6，不高于20~');
+		return false;
+	}
+	if(user.indexOf(' ')!=-1){
+		alert('用户名不能有空格~');
+		return false;
+	}
+}
+function pawsswardClick(){
+	var passward = document.getElementById('passsward').value;
+	if(passward==''){
+		alert('密码不能为空~');
+		return false;
+	}
+	if(passward.indexOf(' ')!=-1){
+		alert('密码不能有空格~');
+		return false;
+	}
+}
+function login(){
+	var user = document.getElementById('user').value;
+    var passward = document.getElementById('passsward').value;
+    var loginDescription = document.getElementById('loginDescription');
+	var text = '登录成功  用户名：'+user+' 密码:'+passward;
+	loginDescription.innerHTML = text;
+}
+//字母数字组合验证码（四位） (如: 4YT8)
+function newRandom(){
+	var randomDes = document.getElementById('randomDescription');
+	var string = '';
+	for(var i=0;i<2;i++){
+		var number = Math.round(Math.random());
+		var charCode = Math.round(Math.random()*25+65);
+		var str = String.fromCharCode(charCode);
+		string += number+str;
+	}
+	randomDes.innerHTML = '随机码：'+string;
+}
+//找出字符串中出现次数最多的字母，将该字母和字母出现的次数拼接成一个新字符串，返回新字符串
+function strHandle(){
+	var str = document.getElementById('inputString2').value;
+	var description = document.getElementById('descriptionStr2');
+	var length = str.length;
+	var obj = {},max = 0,maxChar = null;
+	if(!isNaN(str) || str=='')return false;
+	for(var i=0;i<length;i++){
+		var char = str[i];
+		if(obj[char]){
+			obj[char]++;
+		}else{
+			obj[char] = 1;
+		}
+		
+	}
+	for(var key in obj){
+		if(max<obj[key]){
+			max = obj[key];
+			maxChar = key;
+		}
+	}
+	console.log('作业2---1：');
+	console.log(obj)
+	for(var key in obj){
+		if(obj[key]== max){
+			console.log('出现最多的字符及次数是：'+key+max)
+		}
+	}
+	description.innerHTML = '作业2---1：'+'出现最多的字符及次数是: '+maxChar+max;
+}
+//将字符中单词用空格隔开,已知传入的字符串中只有字母,每个单词的首字母大写，请将每个单词用空格隔开，只保留一个单词的首字母大写
+function submitString(){
+	var str = document.getElementById('inputString').value;
+	var description = document.getElementById('descriptionStr');
+	var length = str.length;
+	var result = str[0]+'';
+	if(!isNaN(str) || str=='')return false;
+	for(var i=1;i<length;i++){
+		var code = str.charCodeAt(i);
+		if(code>=65 && code <=90){
+			var s = String.fromCharCode(code+32);
+			result += ' '+s;
+		}else{
+			result += str[i];
+		}
+	}
+	description.innerHTML = '作业2---2：'+result;
+}
+//已知一个字符串对象中，英语单词用各种非字母字符分割，统计单词的个数
+function word(){
+	var str = document.getElementById('inputString5').value;
+	var description = document.getElementById('descriptionStr5');
+	var length = str.length;
+	var count = 0;
+	if(!isNaN(str) || str=='')return false;
+	for(var i=0;i<length;i++){
+		var code = str.charCodeAt(i);
+		if(code>=65 && code <=90){
+			count++;
+		}else if(code>=97 && code <=122){
+			count++;
+		}
+	}
+	description.innerHTML = '单词个数：'+count;
+}
+//将字符串按照单词进行逆序，空格作为划分单词的唯一条件传入:”Welome to Beijing”改为 “Beijing to Welcome”
+function inverted(){
+	var str = document.getElementById('inputString3').value;
+	var description = document.getElementById('descriptionStr3');
+	var array = str.split(' ').reverse();
+	var string = '';
+	for(var i=0;i<array.length;i++){
+		string += array[i]+' ';
+	}
+	description.innerHTML = '作业3---1：'+string;
+}
+
+//由原数组的元素正序反序拼接而成传入[“One”, “Two”,”Three”] 返回[“One”, “Two”, “Three”,”Three”,”Two”, “One”]
+function symmetry(array){
+	var result =array;
+	var length = array.length;
+	for(var i=length-1;i>=0;i--){
+		result.push(array[i]);
+	}
+	console.log('作业3---2：'+result);
+}
+var result32 = symmetry(['one','two','three']);
+
+//实现函数，查找子串出现的次数，返回字符串str中出现substring的次数传入:”abcabcabc”, “abc”; 返回:3
+function stringHandle(){
+	var str = document.getElementById('inputString4').value;
+	var description = document.getElementById('descriptionStr4');
+	var obj = {},max = 0,maxStr = null;
+	var length = str.length;
+	for(var i=0;i<length;i++){
+		var char = str[i];
+		if(obj[char]){
+			obj[char]++;
+		}else{
+			obj[char] = 1;
+		}
+	}
+	for(var key in obj){
+		if(max < obj[key]){
+			max = obj[key];
+			maxStr = key;
+		}
+	}
+	console.log('作业3---3：');
+	console.log(obj)
+	for(var key in obj){
+		if(obj[key]== max){
+			console.log('出现次数最多的字符：'+key+' 出现次数： '+max)
+		}
+	}
+	//description.innerHTML = '出现次数最多的字符：'+maxStr+'出现次数： '+max;
+}
+//已知千锋邮箱的用户名只能由数字字母下划线组成，域名为@1000phone.com,判断一个字符串是否是千锋邮箱，是返回true，不是返回false。
+function email(){
+	var str = document.getElementById('inputString6').value;
+	var description = document.getElementById('descriptionStr6'); 
+	var str1 = str.split('@')[0];
+	var str2 = str.split('@')[1];
+	var length =str1.length;
+	if(str==''){
+		alert('不能为空');
+		return false;
+	}
+	for(var i=0;i<length;i++){
+		if(isNaN(str1[i])){
+		var code = str1.charCodeAt(i);
+		var char1 = code>=65&& code<=90;
+		var char2 = code>=97 && code <=122;
+		if(!char1 && !char2 && code!=95){
+			alert('用户名非法输入~')
+			return false;
+		}	
+		}
+		
+	}
+	console.log(str1,str2);
+	if(str2 != '1000phone.com'){
+		alert('邮箱@后缀格式错误');
+		return false;
+	}
+	description.innerHTML = '邮箱验证正确：'+str;
+}
