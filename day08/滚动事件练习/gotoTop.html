@@ -5,7 +5,7 @@
 		<title>回到顶部</title>
 		<style>
 			body{
-				height:200000px;
+				height:10200px;
 			}
 			#top{
 				width: 80px;
@@ -14,7 +14,7 @@
 				bottom: 100px;
 				right:20px;
 				background-color:deeppink;
-				display:block;
+				display:none;
 			}
 			
 		</style>
@@ -27,27 +27,23 @@
 	</body>
 	<script>
 		var box = document.getElementById('box');
-		var top = document.getElementById('top');
 		for(var i=0;i<2000;i++){
 			var p = document.createElement('p');
 			p.innerHTML = '哈哈哈哈哈哈哈哈哈'+i;
 			box.appendChild(p);
 		}
 		window.onscroll = function(){
+			var top = document.getElementById('top');
 			var onscrollTop = document.documentElement.scrollTop ||document.body.scrollTop;
-			console.log(onscrollTop,top);
-			if(onscrollTop>800){
-			top.style.display = 'block';	
+			if(onscrollTop>4000){
+			top.style['display'] = 'block';	
 		}else{
-			top.style.display = 'none';
+			top.style['display'] = 'none';
 		}
 		}
 		top.onclick = function(){
 			document.documentElement.scrollTop = 0;
 			document.body.scrollTop = 0;
 		}
-		
-		
-		
 	</script>
 </html>

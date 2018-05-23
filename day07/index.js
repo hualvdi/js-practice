@@ -16,11 +16,7 @@ var practice02 = stringChange2(practiceStr);
 function randon4(number){
 	var string ='';
 	for(var i=0;i<number;i++){
-		console.log(number,n);
-		var n = Math.round(Math.random()*10);
-		if(n ==10){
-			n = 9;
-		}
+		var n = Math.floor(Math.random()*10);
 		string += n;
 	}
 	console.log('练习题3：',string);

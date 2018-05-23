@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作业2</title>
+	</head>
+	<body>
+		<div id='box'></div>
+	</body>
+	<script>
+		var box = document.getElementById('box');
+		var text ,i=5;
+		var timer ,end;
+		timer = setInterval(time,1000);
+		function time(){
+			box.innerHTML = '我是一条广告，谢谢，'+i+'秒后自动关闭'
+			if(i>0){
+				i--;
+				
+			}else{
+				clearInterval(timer);
+			}
+		}
+		end = setTimeout(timerEnd,5000);
+		function timerEnd(){
+			clearTimeout(end);
+			window.close();
+		}
+	</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下滑到1000置顶</title>
+		<style>
+			body{
+				height:2000px;
+			}
+			.box{
+				width:100%;
+				height:30px;
+				background-color: hotpink;
+				margin-top:600px;
+				text-align: center;
+				color:palegoldenrod;
+				vertical-align:middle ;
+			}
+			.top{
+			    width:100%;
+				height:30px;
+				background-color: hotpink;
+				position: fixed;
+				top:10px;
+				text-align: center;
+				color:mediumpurple;	
+				vertical-align:middle ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='box' class='box'>快，送我上去</div>
+	</body>
+	<script>
+		window.onscroll = function(){
+			var box = document.getElementById('box');
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			if(scrollTop >600){
+				box.className = 'top';
+				box.innerHTML = '哼，我不走了'
+			}else{
+				box.className = 'box';
+				box.innerHTML = '快，送我上去'
+			}
+		}
+	</script>
+</html>
