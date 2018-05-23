@@ -1,0 +1,29 @@
+table{
+	width:600px;
+	margin:20px 0 20px 90px;
+}
+.picture{
+	width:600px;
+}
+.picture a{
+	color:cornflowerblue;
+	text-decoration: underline;
+}
+.img{
+	width:300px;
+	height:300px;
+}
+.text{
+	color:cornflowerblue;
+	text-decoration: underline;
+}
+.p p{
+	word-break: break-all;
+}
+.p a{
+	display: block;
+	text-align: left;
+	margin-left: 8px;
+	text-decoration: underline;
+	color:cornflowerblue;	
+}

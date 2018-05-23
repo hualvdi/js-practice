@@ -18,7 +18,6 @@ function randon4(number){
 	for(var i=0;i<number;i++){
 		console.log(number,n);
 		var n = Math.round(Math.random()*10);
-		
 		if(n ==10){
 			n = 9;
 		}
