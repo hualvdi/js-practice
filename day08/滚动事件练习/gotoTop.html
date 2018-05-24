@@ -27,21 +27,21 @@
 	</body>
 	<script>
 		var box = document.getElementById('box');
+		var topBox = document.getElementById('top');
 		for(var i=0;i<2000;i++){
 			var p = document.createElement('p');
 			p.innerHTML = '哈哈哈哈哈哈哈哈哈'+i;
 			box.appendChild(p);
 		}
 		window.onscroll = function(){
-			var top = document.getElementById('top');
 			var onscrollTop = document.documentElement.scrollTop ||document.body.scrollTop;
 			if(onscrollTop>4000){
-			top.style['display'] = 'block';	
+			topBox.style['display'] = 'block';	
 		}else{
-			top.style['display'] = 'none';
+			topBox.style['display'] = 'none';
 		}
 		}
-		top.onclick = function(){
+		topBox.onclick = function(){
 			document.documentElement.scrollTop = 0;
 			document.body.scrollTop = 0;
 		}
