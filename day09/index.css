@@ -1,0 +1,58 @@
+.colorBox{
+	background-color: cornflowerblue;
+	width:400px;
+	height:400px;
+	position:relative;
+}
+#wordSize{
+	font-size:20px;
+    position: absolute;
+	top:50%;
+	left:50%;
+	width:200px;
+	height:200px;
+	color:#ffffff;
+	margin-top:-100px;
+	margin-left:-100px;
+	text-align: center;
+}
+.formBox{
+	margin-top:40px;
+}
+.twocolor li{
+	width:400px;
+	height:30px;
+}
+.twocolor li:nth-child(n+0){
+	background-color:mediumvioletred ;
+}
+.twocolor li:nth-child(2n+0){
+	background-color:gray ;
+}
+.gallery{
+	width:1200px;
+	height:800px;
+	border:1px solid #e0e0e0;
+	margin-bottom: 20px;
+	position:relative;
+}
+
+.gallery li{
+	float:left;
+	list-style: none;
+}
+.gallery img{
+	width:200px;
+	height:200px;
+	margin-left:20px;
+	
+}
+#placeholder{
+	width:300px;
+	height:300px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-100px;
+	margin-left:-150px;
+}

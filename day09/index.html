@@ -3,40 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>day09</title>
-		<style>
-			.colorBox{
-				background-color: cornflowerblue;
-				width:400px;
-				height:400px;
-				position:relative;
-			}
-			#wordSize{
-				font-size:20px;
-				position: absolute;
-				top:50%;
-				left:50%;
-				width:200px;
-				height:200px;
-				color:#ffffff;
-				margin-top:-100px;
-				margin-left:-100px;
-				text-align: center;
-			}
-			.formBox{
-				margin-top:40px;
-			}
-			ul li{
-				width:400px;
-				height:30px;
-			}
-			ul li:nth-child(n+0){
-				background-color:mediumvioletred ;
-			}
-			ul li:nth-child(2n+0){
-				background-color:gray ;
-			}
-			
-		</style>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
 	</head>
 	<body>
 		<div >
@@ -54,20 +21,43 @@
 			<input placeholder="专业" size=20 class='profession'/>
 			<button onclick="save()">保存</button>
 		</div>
-		<div>
+		<div class='twocolor'>
 			<ul>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				<li>6</li>
-				<li>7</li>
-				<li>8</li>
-				<li>9</li>
-				<li>10</li>
+				<li>w</li>
+				<li>s</li>
+				<li>r</li>
+				<li>j</li>
+				<li>r</li>
+				<li>a</li>
+				<li>d</li>
+				<li>x</li>
+				<li>k</li>
+				<li>a</li>
 			</ul>
 		</div>
+		
+		<div class='gallery'>
+			<ul id='imagegallery'>
+			<li>
+				<img src='img/1.jpg'  title='a fireworks display11'/>
+			</li>
+			<li>
+				<img src='img/2.jpg' title='a fireworks display22'/>	
+			</li>
+			<li>
+				<img src='img/3.jpg' title='a fireworks display33'/>	
+			</li>
+			<li>
+				<img src='img/4.jpg' title='a fireworks display44'/>	
+			</li>
+			<li>
+				<img src='img/5.jpg' title='a fireworks display55'/>	
+			</li>
+		</ul>
+		<img id='placeholder' src='img/头像.jpeg' alt='my picture'/>
+		</div>
+		
+	<div class='homework'></div>
 
 	</body>
 	<script src="index.js"></script>

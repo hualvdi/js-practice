@@ -62,3 +62,21 @@ function startChange(){
 		clearInterval(timer);
 	}
 }
+
+//图片库
+window.onload = function(){
+	prepareGallery();
+}
+function prepareGallery(){
+	var gallery = document.getElementById('imagegallery');
+	var links = gallery.getElementsByTagName('img');
+	for(var i=0; i<links.length;i++){
+		links[i].onclick = function(){
+			var source = this.getAttribute('src');
+			var placeholder = document.getElementById('placeholder');
+			placeholder.setAttribute('src', source);
+		}
+	}
+}
+
+
