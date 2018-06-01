@@ -36,33 +36,6 @@ function save(){
 	alert('姓名:'+name+' 年龄:'+age+' 学历'+education+' 专业'+profession);
 }
 
-function startChange(){
-	var stopChange = document.getElementById('stopChange');
-	var timerBox = document.getElementsByClassName('timerBox')[0];
-	var size = document.getElementById('size');
-	var colorArray = ['red','blue','yellow','green','black','orange','cornflowerblue'];
-	var sizeArray = ['12px','13px','14px','15px','16px','17px','18px'];
-	var timer, i = 0;
-	var length = colorArray-1,lengthsTo2 = (colorArray-1)*2;
-	timer = setInterval(starts,100);
-	function starts(){
-		if(i<length){
-			timerBox.style.backgroundColor = colorArray[i];
-			size.style.fontSize = sizeArray[i];
-			i++;
-		}else if(i<lengthsTo2){
-			timerBox.style.backgroundColor = colorArray[lengthsTo2-i];
-			size.style.fontSize = sizeArray[lengthsTo2-i];
-			i++;
-		}else{
-			i = 0;
-		}
-	}
-	stopChange.onclick = function(){
-		clearInterval(timer);
-	}
-}
-
 //图片库
 window.onload = function(){
 	prepareGallery();

@@ -56,3 +56,55 @@
 	margin-top:-100px;
 	margin-left:-150px;
 }
+.box{
+	width:400px;
+	height:700px;
+	background-color: #E0E0E0;
+	margin:40px 0 0 100px;
+	
+}
+.counter{
+	width:auto;
+	height:auto;
+	margin:0px 20px;
+	padding-top:20px;
+}
+.counter ul{
+	padding: 0;
+}
+.counter li{
+	list-style-type: none;
+	width:100px;
+	height:100px;
+	background-color: #808080;
+	text-align: center;
+	display:inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.counter li:nth-child(3n+0){
+	margin-right: 0px;
+}
+.counter li:hover{
+	color:#FFFFFF;
+	background-color:#FF69B4;
+}
+.yes{
+	color:#FFFFFF;
+	background-color:#FF69B4;
+}
+.no{
+	color:#000000;
+	background-color: #808080;
+}
+.counter div{
+	width:350px;
+	height:100px;
+	border:2px solid #f3f2eede;
+	text-align: center;
+}
+.counter div p{
+	margin-top:30px;
+	color:#f92020;
+}
+
