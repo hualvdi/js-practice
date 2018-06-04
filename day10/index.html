@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>day10</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class='box'>
+			<ol>
+				<li>动态表格的创建, 在输入框中输入内容后,点击保存则在表格末尾添加一条记录, 点击删除则会删除对应行的记录</li>
+				<div class="inputDiv">
+					ID: <input id='inputID'/>
+					姓名：<input  id='name'/>
+					电话：<input id='phone' />
+					 <button onclick="submit()">保存</button>
+				</div>
+				<table border>
+					<thead>
+						<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Tel</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody id='tbody'></tbody>
+				</table>
+				<li>碰撞, 两个块在指定范围内运动, 碰壁后会反弹 </li>
+				<div class='runBox' id='runBox'>
+					<div id='blueBox'></div>
+			        <div id='redBox'></div>
+				</div>
+				<button onclick="startRun()">开始</button>
+				<button onclick="stopRun()">暂停</button>
+				<li>tab切换, 点击科技显示左图, 点击探索显示右图</li>
+				<div id='tab'>
+					<ul id='menu_title'>
+						<li>科技</li>
+						<li >探索</li>
+					</ul>
+					<div id='menu_content'>
+						<p style='display: none;'>科技科技科技科技科技科技科技科技科技科技科技</p>
+						<p style='display: none;'>探索探索探索探索探索探索探索探索探索探索探索</p>
+					</div>
+				</div>
+			</ol>
+		</div>
+	</body>
+	<script src="index.js"></script>
+</html>

@@ -1,0 +1,56 @@
+.box table{
+	width:400px;
+}
+.inputDiv{
+	margin-bottom: 20px;
+}
+#tbody a{
+	text-decoration: underline;
+	color:cornflowerblue;
+}
+#runBox{
+	width:400px;
+	height:400px;
+	background-color: #808080;
+	position:relative;
+	
+}
+#runBox div{
+	width:20px;
+	height:20px;
+	display:inline-block;
+}
+#blueBox{
+	background-color: cadetblue;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#redBox{
+	background-color: hotpink;
+	position:absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#tab{
+	width:400px;
+	height:400px;
+	border-right:1px solid plum;
+	border-left:1px solid plum;
+	border-bottom:1px solid plum;
+}
+#menu_title {
+	background-color: #E0E0E0;
+}
+#menu_title li{
+	display:inline-block;
+	padding:0 6px;
+	text-decoration: none;
+	list-style-type: none;
+}
+#menu_title li:hover{
+	background-color: coral;
+}
+.select{
+	background-color: coral;
+}
