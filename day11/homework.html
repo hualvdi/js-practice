@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>day11</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<ul>
+		<p>制作下拉菜单</p>
+		<li>最开始效果如左图1</li>
+		<li>鼠标滑过”请选择游戏名称”区域时,效果如图2</li>
+		<li>鼠标滑过下拉选项区域时, 让下拉选项可以继续显示,移开后隐藏</li>
+		<li>鼠标在选项中滑过时, 显示效果图3</li>
+		<li>选择某一项, 将顶部的名称改成你选择的游戏名称</li>
+		</ul>
+		<div class='menu'>
+			<p id='content'>请选择游戏名称</p>
+			<ul id='menu'>
+				<li>英雄联盟</li>
+				<li>魔兽世界</li>
+				<li>大话西游</li>
+				<li>天龙八部</li>
+				<li>九阴真经</li>
+			</ul>
+		</div>
+		<p>制作如下图效果:  当鼠标滑过小图片时, 让大图片也显示该图 </p>
+		<table border id='gallery'>
+			<tr>
+				<th colspan="3" rowspan="3"><img src="img/6.jpg" id='bigImg'/></th>
+				<th><img src="img/头像.jpeg" /></th>
+				<th><img src="img/2.jpg" /></th>
+			</tr>
+			<tr>
+				<th><img src="img/3.jpg" /></th>
+				<th><img src="img/4.jpg" /></th>
+			</tr>
+			<tr>
+				<th><img src="img/5.jpg" /></th>
+				<th><img src="img/6.jpg" /></th>
+			</tr>
+			<tr>
+				<th><img src="img/头像.jpeg" /></th>
+				<th><img src="img/5.jpg" /></th>
+				<th><img src="img/4.jpg" /></th>
+				<th><img src="img/3.jpg" /></th>
+				<th><img src="img/头像.jpeg" /></th>
+			</tr>
+		</table>
+	</body>
+	<script src="homework.js"></script>
+</html>

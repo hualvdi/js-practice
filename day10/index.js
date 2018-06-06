@@ -36,7 +36,7 @@ var blueBox = document.getElementById('blueBox');
 var redBox = document.getElementById('redBox');
 var runBox = document.getElementById('runBox');
 var timer1 = null,timer2 = null,moveX = 1,moveY = 1,movez = 1,movek = 1, x = 20, y = 20,z = 8,k = 8;
-console.log(runBox.clientWidth , redBox.offsetWidth,redBox.clientWidth);
+//console.log(runBox.clientWidth , redBox.offsetWidth,redBox.clientWidth);
 function moveBoll(){
 	if(moveX){
 		x = x+Math.random()*5;
@@ -119,7 +119,6 @@ for(var i=0;i<links.length;i++){
 			texts[j].style.display = 'none';
 		}
 		this.className = 'select';
-		console.log(this);
 		texts[this.index].style.display = 'block';
 		
 	}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>day12</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<p>放大镜, 移动鼠标, 在小图上移动时显示大图,并跟随鼠标移动, 当不在小图上时, 隐藏大图</p>
+		<div class='clothesBox'>
+			<ul id='cbox'>
+				<li><img src='img/1.jpg' /></li>
+				<li><img src='img/2.jpg' /></li>
+				<li><img src='img/3.jpg' /></li>
+				<li><img src='img/4.jpg' /></li>
+			</ul>
+			<img src='img/头像.jpeg' id='des'/>
+		</div>
+		<p>可对粉色区域进行拖拽，点击关闭即关闭窗口</p>
+		<div class='box'>
+			<p>关闭窗口</p>
+			<div id='moveBox'></div>
+		</div>
+		<div id='menus'>
+		<p>自制菜单，请按鼠标右键查看</p>
+		<ul id='content'>
+			<li>剪切</li>
+			<li>复制</li>
+			<li>粘贴</li>
+		</ul>
+		</div>
+		<p>事件冒泡,请点击任意颜色</p>
+		<div id="bigBox">
+			<div id="eventBox">
+				<div id="box1">
+					<div id="box2">
+						<div id="box3"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="index.js"></script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>day11</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div id='practice1'>
+			<input id='input1' value='我是初始化文本'/>
+			<div id='showText'></div>
+		</div>
+		<ul>
+			<p>有一个红色的div块</p>
+			<li>如果我按下ctrl+c变换颜色</li>
+			<li>如果我按下ctrl + shift + r 重置颜色,回复初始颜色</li>
+			<li>如果我按下向上箭头,向上移动, 同理还可以向下,左,右移动</li>
+			<li>如果我按下ctrl + 上下左右,走的步数变大</li>
+			<li>有四个button, 上下左右, 当我点击对应的按钮,这个块就进行对应的行走</li>
+		
+		<div class='redBox'>
+		<div id='redBox'>
+			<p>鼠标事件试验区</p>
+			<button onclick='moveFunc("left")'>向左</button>
+			<button onclick='moveFunc("right")'>向右</button>
+			<button onclick='moveFunc("top")'>向上</button>
+			<button onclick='moveFunc("bottom")'>向下</button>
+		</div>
+		</div>
+		</ul>
+	</body>
+	<script src="index.js"></script>
+</html>
