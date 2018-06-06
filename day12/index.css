@@ -51,6 +51,7 @@
 	height:400px;
 	background-color: #CCCCCC;
 	margin:10px 0px;
+	position: relative;
 }
 #content{
 	width:50px;
@@ -97,7 +98,7 @@
 }
 .clothesBox{
 	width:400px;
-	height:400px;
+	height:300px;
 	position: relative;
 }
 #cbox{

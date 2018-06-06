@@ -92,11 +92,11 @@ function clothesChange(){
 			}
 			var src = imgs.getAttribute('src');
 			des.setAttribute('src',src);
-			console.log(oEvent.clientY,oEvent.clientX);
 			des.style.top = oEvent.clientY+'px';
 			des.style.left = oEvent.clientX+'px';
 			des.style.display = 'block';
 			this.className = 'imgSelect';
 		}
+
 	}
 }
