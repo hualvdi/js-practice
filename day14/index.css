@@ -1,0 +1,13 @@
+#bugResult,#vareResult{
+	color:deeppink;
+}
+#subText{
+	width:300px;
+	height:20px;
+}
+#textArea{
+	height:80px;
+	width:400px;
+	margin-top:10px;
+	display:block;
+}

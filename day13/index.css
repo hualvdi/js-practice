@@ -1,0 +1,14 @@
+.box{
+	width:400px;
+	height:400px;
+	position:relative;
+	border:1px dotted #808080;
+}
+.redBox{
+	width:100px;
+	height:100px;
+	background-color: red;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
